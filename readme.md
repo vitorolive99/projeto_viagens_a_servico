@@ -1,43 +1,26 @@
-# Configuração de Ambiente Virtual com Virtualenv para Projeto Python de Viagens
+# Viagens a Serviço - Análise e Exploração de Dados
+As viagens a serviço são uma parte fundamental das operações de negócios e profissionais em todo o mundo. Elas referem-se a deslocamentos realizados por indivíduos ou grupos no contexto profissional ou empresarial, com o propósito de cumprir obrigações relacionadas ao trabalho, negócios ou missões específicas. Essas viagens podem variar desde visitas a clientes e parceiros comerciais até participação em conferências, treinamentos ou eventos corporativos.
 
+O crescente acesso a dados abertos tem permitido uma análise mais detalhada e abrangente das viagens a serviço. Portais de transparência governamental e corporativa disponibilizam informações valiosas, como datas, destinos, motivos das viagens, custos associados, detalhes sobre passagens aéreas, hospedagens e despesas relacionadas. A análise desses dados não apenas oferece insights sobre os padrões de viagem e despesas, mas também possibilita a identificação de oportunidades de otimização, economia e conformidade com políticas organizacionais.
 
+Este estudo de caso visa explorar e analisar os dados de viagens a serviço disponíveis por meio do portal da transparência. Ele oferece um guia passo a passo para configurar o ambiente virtual necessário para a análise dos dados, destacando a importância da preparação adequada do ambiente para uma análise eficaz. Ao seguir este guia, os profissionais e pesquisadores podem extrair insights valiosos dos dados de viagens a serviço, contribuindo para uma gestão mais eficiente e estratégica dessas atividades no contexto empresarial e profissional..
 
-# Propósito do Banco de Dados:
+# Funcionalidade
+A funcionalidade deste projeto está voltada para a preparação do ambiente virtual necessário para análise e exploração dos dados de viagens a serviço. Ele fornece instruções claras sobre como configurar o ambiente virtual usando Virtualenv, ativá-lo e instalar os pacotes necessários a partir do arquivo requirements.txt.
 
-O banco de dados db_viagens_a_servico foi projetado para armazenar informações relacionadas a viagens a serviço, como propostas de viagem, detalhes de passagens, pagamentos e trechos de viagem. Seu propósito é fornecer uma estrutura organizada para registrar e gerenciar os dados essenciais de viagens corporativas ou a trabalho, permitindo uma análise eficiente e a tomada de decisões informadas.
-Os principais pontos são as tendências tecnológicas, como inteligência artificial, computação quântica e Internet das Coisas, que influenciarão significativamente o desenvolvimento de software, além disso, são discutidos os desafios éticos e sociais
- 
-# INTRODUÇÃO:
+# Passos para Preparar o Ambiente Virtual:
+Instalar o Virtualenv (se necessário):
 
-No desenvolvimento de projetos Python, é fundamental garantir um ambiente de trabalho isolado e controlado para gerenciar dependências e evitar conflitos entre diferentes projetos. Uma maneira eficaz de alcançar isso é através do uso do Virtualenv, uma ferramenta que permite criar ambientes virtuais Python independentes. Neste fichamento, exploraremos os passos necessários para configurar um ambiente virtual usando o Virtualenv para um projeto Python relacionado a viagens.
+Caso o Virtualenv não esteja instalado, você pode fazê-lo usando o pip, um gerenciador de pacotes do Python.
+Criar um Ambiente Virtual:
 
+Utilize o Virtualenv para criar um novo ambiente virtual no diretório desejado.
+Ativar o Ambiente Virtual:
 
-# OBJETIVO:
+Após a criação do ambiente virtual, ative-o usando o comando apropriado de acordo com o sistema operacional (Windows/Linux/Mac).
+Instalar Pacotes a partir do requirements.txt:
 
-O objetivo deste fichamento é fornecer um guia claro e conciso sobre como configurar um ambiente virtual com Virtualenv para um projeto Python de viagens. Exploraremos os passos necessários, suas vantagens e como executar o processo de configuração.
+Com o ambiente virtual ativado, instale os pacotes listados no arquivo requirements.txt usando o pip.
 
-# VANTAGENS:
-
-•	Isolamento de Ambiente: O Virtualenv permite criar ambientes virtuais independentes, garantindo que as dependências do projeto sejam instaladas separadamente de outros projetos, evitando conflitos.
-
-•	Gerenciamento Simplificado de Dependências: Ao usar o Virtualenv, é fácil gerenciar as dependências do projeto, especialmente ao instalar pacotes a partir de um arquivo requirements.txt.
-
-•	Portabilidade: O ambiente virtual pode ser facilmente compartilhado com outros desenvolvedores, garantindo consistência e facilitando a colaboração no projeto.
-
-•	Facilidade de Limpeza: Ao encerrar o ambiente virtual, é simples remover todas as dependências instaladas, deixando o sistema de arquivos limpo.
-
-
-# COMO EXECUTAR:
-
-1.	Instalar o Virtualenv: Se o Virtualenv não estiver instalado, execute pip install virtualenv no terminal ou prompt de comando.
-
-2.	Criar um Ambiente Virtual: Navegue até o diretório do projeto e execute virtualenv venv_viagem para criar um novo ambiente virtual.
-
-3.	Ativar o Ambiente Virtual: No Windows, execute venv_viagem\Scripts\activate; no Linux/Mac, execute source venv_viagem/bin/activate.
-
-4.	Instalar Pacotes a partir do requirements.txt: Com o ambiente virtual ativado, execute pip install -r requirements.txt para instalar as dependências do projeto listadas no arquivo requirements.txt.
-
-
-# CONCLUSÃO:
-
-Configurar um ambiente virtual com Virtualenv é uma prática recomendada para desenvolvedores Python que desejam manter seus projetos organizados, isolados e facilmente gerenciáveis. Este fichamento forneceu uma visão geral dos passos necessários, destacou as vantagens dessa abordagem e explicou como executar o processo de configuração. Ao seguir estas diretrizes, os desenvolvedores podem estabelecer um ambiente de desenvolvimento eficiente e consistente para projetos Python de viagens e além.
+# Conclusão
+Este estudo de caso oferece uma abordagem prática para preparar o ambiente virtual necessário para análise de dados de viagens a serviço. Ao seguir as instruções fornecidas, os usuários podem configurar facilmente o ambiente e começar a explorar os dados disponíveis. A análise desses dados pode fornecer insights valiosos para empresas, organizações e profissionais interessados em otimizar suas atividades de viagem e gerenciar melhor os custos associados a elas.
