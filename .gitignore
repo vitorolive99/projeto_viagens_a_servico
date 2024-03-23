@@ -1,2 +1,6 @@
 /venv_viagem
 /csv_files/*.csv
+
+Pipfile.lock
+
+Pipfile
