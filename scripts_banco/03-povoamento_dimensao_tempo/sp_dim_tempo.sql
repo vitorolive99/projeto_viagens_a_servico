@@ -24,26 +24,26 @@ BEGIN
 
 			IF(DATEPART(QQ, @DT_INICIAL) = 1)
 			BEGIN
-				SET @NOME_TRI = '1� Trimestre'
-				SET @NOME_SEM = '1� Semestre'
+				SET @NOME_TRI = '1º Trimestre'
+				SET @NOME_SEM = '1º Semestre'
 				SET @NUM_SEM = 1
 			END
 			IF(DATEPART(QQ, @DT_INICIAL) = 2)
 			BEGIN
-				SET @NOME_TRI = '2� Trimestre'
-				SET @NOME_SEM = '1� Semestre'
+				SET @NOME_TRI = '2º Trimestre'
+				SET @NOME_SEM = '1º Semestre'
 				SET @NUM_SEM = 1
 			END
 			IF(DATEPART(QQ, @DT_INICIAL) = 3)
 			BEGIN
-				SET @NOME_TRI = '3� Trimestre'
-				SET @NOME_SEM = '2� Semestre'
+				SET @NOME_TRI = '3º Trimestre'
+				SET @NOME_SEM = '2º Semestre'
 				SET @NUM_SEM = 2
 			END
 			IF(DATEPART(QQ, @DT_INICIAL) = 4)
 			BEGIN
-				SET @NOME_TRI = '4� Trimestre'
-				SET @NOME_SEM = '2� Semestre'
+				SET @NOME_TRI = '4º Trimestre'
+				SET @NOME_SEM = '2º Semestre'
 				SET @NUM_SEM = 2
 			END
 

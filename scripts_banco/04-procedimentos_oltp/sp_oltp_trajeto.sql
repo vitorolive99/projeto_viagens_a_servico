@@ -13,3 +13,7 @@ begin
 	FROM TB_PASSAGEM
 	WHERE PAIS_ORIGEM_VOLTA != 'Sem informação'
 end
+
+EXEC sp_oltp_trajeto '20240324'
+
+SELECT * FROM TB_AUX_TRAJETO

@@ -8,3 +8,7 @@ begin
 	SELECT @data_carga, TIPO_PASSAGEM
 	FROM TB_PASSAGEM
 end
+
+EXEC sp_oltp_tipo '20240324'
+
+SELECT * FROM TB_AUX_TIPO

@@ -25,6 +25,6 @@ END
 
 -- Teste
 
-exec sp_dim_cargo '20230321'
+exec sp_dim_cargo '20240324'
 
 select * from DIM_CARGO

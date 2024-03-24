@@ -8,3 +8,7 @@ begin
 	SELECT @data_carga, CPF, NOME
 	FROM TB_VIAGENS
 end
+
+EXEC sp_oltp_pessoa '20240324'
+
+SELECT * FROM TB_AUX_PESSOA
