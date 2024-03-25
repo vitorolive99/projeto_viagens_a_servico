@@ -11,11 +11,11 @@ BEGIN
 
     WHILE @@FETCH_STATUS = 0
     BEGIN
-        IF NOT EXISTS (SELECT * FROM DIM_CARGO WHERE NOME = @NOME)
-        BEGIN
-            INSERT INTO DIM_CARGO (NOME)
-            VALUES (@NOME)
-        END
+        IF @NOME IS NOT NULL AND NOT EXISTS (SELECT * FROM DIM_CARGO WHERE NOME = @NOME)
+            BEGIN
+                INSERT INTO DIM_CARGO (NOME)
+                VALUES (@NOME)
+            END
         FETCH NEXT FROM CUR INTO @NOME
     END
 
@@ -24,6 +24,7 @@ BEGIN
 END
 
 -- Teste
+DELETE FROM dim_cargo;
 
 exec sp_dim_cargo '20240324'
 
