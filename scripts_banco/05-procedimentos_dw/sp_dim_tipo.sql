@@ -11,7 +11,7 @@ BEGIN
 
     WHILE @@FETCH_STATUS = 0
     BEGIN
-        IF NOT EXISTS (SELECT * FROM DIM_TIPO WHERE TIPO_PASSAGEM = @NOME)
+        IF NOT EXISTS (SELECT * FROM DIM_TIPO WHERE NOME = @NOME)
         BEGIN
             INSERT INTO DIM_TIPO (NOME)
             VALUES (@NOME)
@@ -25,6 +25,8 @@ END
 
 -- Teste
 
-exec sp_dim_tipo '20230321'
+exec sp_dim_tipo '20240324'
 
 select * from DIM_TIPO
+
+select * from tb_aux_tipo

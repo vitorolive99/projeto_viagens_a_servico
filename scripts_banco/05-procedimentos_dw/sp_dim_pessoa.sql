@@ -1,7 +1,7 @@
 CREATE OR ALTER PROCEDURE sp_dim_pessoa(@data_carga DATETIME)
 AS
 BEGIN
-    DECLARE @CPF INT
+    DECLARE @CPF VARCHAR (14)
     DECLARE @NOME VARCHAR(100)
 
     DECLARE CUR CURSOR FOR
@@ -12,15 +12,11 @@ BEGIN
 
     WHILE @@FETCH_STATUS = 0
     BEGIN
-        IF NOT EXISTS (SELECT * FROM DIM_PESSOA WHERE CPF=@CPF)
+        IF @NOME != 'Informações protegidas por sigilo' AND NOT EXISTS (SELECT * FROM DIM_PESSOA WHERE CPF=@CPF AND NOME=@NOME)
         BEGIN
             INSERT INTO DIM_PESSOA (CPF,NOME)
             VALUES (@CPF,@NOME)
         END
-        ELSE
-        BEGIN
-            UPDATE DIM_PESSOA SET CPF = @CPF,NOME = @NOME WHERE CPF = @CPF
-        END 
         FETCH NEXT FROM CUR INTO @CPF,@NOME
     END
 
@@ -29,7 +25,7 @@ BEGIN
 END
 
 -- Teste
-
-exec sp_dim_pessoa '20230321'
+DELETE FROM DIM_PESSOA
+exec sp_dim_pessoa '20240324'
 
 select * from DIM_PESSOA
