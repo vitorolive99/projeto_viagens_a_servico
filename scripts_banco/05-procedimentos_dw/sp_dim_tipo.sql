@@ -4,7 +4,9 @@ BEGIN
     DECLARE @NOME VARCHAR(100)
 
     DECLARE CUR CURSOR FOR
-    SELECT TIPO_PASSAGEM FROM TB_AUX_TIPO WHERE DATA_CARGA=@data_carga;
+    SELECT TIPO_PASSAGEM 
+	FROM TB_AUX_TIPO 
+	WHERE DATA_CARGA = @data_carga;
 
     OPEN CUR 
     FETCH NEXT FROM CUR INTO @NOME
@@ -28,5 +30,3 @@ END
 exec sp_dim_tipo '20240324'
 
 select * from DIM_TIPO
-
-select * from tb_aux_tipo
